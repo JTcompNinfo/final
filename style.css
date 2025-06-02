@@ -1,0 +1,27 @@
+/*
+Colors 
+
+#00568c -> Dark Blue
+#008e66 -> Jade Green
+#ffffff -> White
+#000000 -> Black
+#3d3d3d -> Grey
+
+*/
+
+nav {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    border: 0px;
+    padding: 30px;
+    background-image: linear-gradient(to right, #00568c, #008e66);
+    display: block;
+    text-align: center;
+    color: #ffffff;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+}
