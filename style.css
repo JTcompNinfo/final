@@ -9,19 +9,108 @@ Colors
 
 */
 
+.off-screen-menu{
+   background-color: #3d3d3da2;
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    left: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3em;
+    transition: .7s ease;
+}
+
+.off-screen-menu.active {
+    left: 0;
+}
+
 nav {
     position: sticky;
     top: 0;
     overflow: hidden;
-    border: 0px;
     padding: 30px;
     background-image: linear-gradient(to right, #00568c, #008e66);
     display: block;
+    color: #ffffff; 
     text-align: center;
+}
+
+.nav1 {
+    display: none;
+}
+
+.nav2 {
+    text-align: right;
+}
+nav a, .off-screen-menu a, .off-screen-menu {
+    text-decoration: none;
     color: #ffffff;
 }
 
-nav a {
-    text-decoration: none;
-    color: #ffffff;
+.ham-menu {
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative; /* so spans can be positioned absolutely */
+}
+
+.ham-menu span {
+    height: 3px;
+    width: 50px;
+    background-color: #6f86ff;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -25%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, 25%) rotate(-45deg);
+}
+
+#hero {
+    background-image: linear-gradient(to right, #00568c, #008e66);
+    height: 500px;
+}
+
+@media screen and (min-width: 769px) {
+
+}
+
+@media screen and (min-width: 1025px) {
+    .nav1 {
+        display: block;
+    }
+    .nav2{
+        display: none;
+    }
+    .off-screen-menu {
+        display: none;
+    }
 }
