@@ -44,6 +44,7 @@ nav {
     display: block;
     color: #ffffff; 
     text-align: center;
+    z-index: 10;
 }
 
 .nav1 {
@@ -140,6 +141,33 @@ nav a, .off-screen-menu a, .off-screen-menu {
 h1, h2, h3 {
     font-family: Georgia;
     text-align: center;
+}
+
+hr {
+  height: 3px;
+  color: #00568c;
+  background-color: #00568c;
+}
+
+.card-holder {
+  padding: 2%;
+}
+
+.card {
+  border: solid #00568c 1px;
+  width: 80%;
+  height: 350px;
+  margin: auto;
+  padding: 2%;
+  border-radius: 2em;
+}
+
+.card p {
+  font-size: 20px;
+}
+
+.card h3 {
+  font-size: 40px;
 }
 
 @media screen and (min-width: 769px) {
