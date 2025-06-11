@@ -6,3 +6,12 @@ hamMenu.addEventListener('click', () => {
     offScreenMenu.classList.toggle('active');
 })
 
+
+function toggleVisibility() {
+const element = document.getElementById("myElement");
+if (element.style.visibility === "hidden") {
+    element.style.visibility = "visible";
+} else {
+    element.style.visibility = "hidden";
+}
+}
